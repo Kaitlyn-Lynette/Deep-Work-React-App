@@ -21,10 +21,16 @@ function App() {
       input: "Spent the morning reviewing Big O "
     },
   ])
+
+  //Add Log
+  const addLog = (log) => {
+    console.log(log)
+  }
+
   return (
     <div className="container">
       <Header />
-      <AddLog />
+      <AddLog onAdd={addLog}/>
       <Logs logs={logs} />
     </div>
   );
