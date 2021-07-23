@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import Header from './components/Header'
+import AddLog from './components/AddLog'
 import Logs from './components/Logs'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
   return (
     <div className="container">
       <Header />
+      <AddLog />
       <Logs logs={logs} />
     </div>
   );
