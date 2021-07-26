@@ -25,7 +25,7 @@ const AddLog = ({onAdd}) => {
                 <label>Log</label>
                 <input 
                 type='text' 
-                placeholder='Add Task' 
+                placeholder='Add Log' 
                 value={text} 
                 onChange={(e)=>setText(e.target.value)} />
             </div> 
@@ -33,7 +33,7 @@ const AddLog = ({onAdd}) => {
                 <label>Day & Time</label>
                 <input 
                 type='text' 
-                placeholder='Add Task'
+                placeholder='Add Time & Day'
                 value={day}
                 onChange={(e)=>setDay(e.target.value)} />
             </div> 

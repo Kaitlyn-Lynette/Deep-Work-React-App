@@ -24,7 +24,10 @@ function App() {
 
   //Add Log
   const addLog = (log) => {
-    console.log(log)
+    const id = Math.floor(Math.random()*1000) +1
+    const newLog = {id, ...log}
+    console.log(newLog)
+    setLogs([...logs, newLog])
   }
 
   return (
