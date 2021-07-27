@@ -1,7 +1,8 @@
 const Log = ({log}) => {
     return (
         <div className='log'>
-            <h3>{log.input}</h3>
+            <h3>{log.text}</h3>
+            <p>{log.day}</p>
         </div>
     )
 }
