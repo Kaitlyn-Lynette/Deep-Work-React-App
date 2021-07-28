@@ -1,27 +1,26 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import Header from './components/Header'
 import AddLog from './components/AddLog'
 import Logs from './components/Logs'
 
 function App() {
   const [showAddLog, setShowAddLog] = useState(false)
-  const[logs, setLogs] = useState([
-    {
-      id: 1,
-      day: "2021-06-15T12:17:46.260Z",
-      text: "Lets see how it prints. "
-    },
-    {
-      id: 2,
-      day: "2021-06-17T12:48:34.692Z",
-      text: "Spend an hour reviewing Big O, specifically logarithmic runtime. "
-    },
-    {
-      id: 3,
-      day: "2021-06-18T16:27:54.091Z",
-      text: "Spent the morning reviewing Big O "
-    },
-  ])
+  const[logs, setLogs] = useState([])
+
+  useEffect(() => {
+    const getLogs = async () => {
+      const logsFromServer = await fetchLogs()
+      setLogs(logsFromServer)
+    }
+    getLogs()
+  },[])
+
+  //Fetch logs 
+  const fetchLogs = async () => {
+    const res = await fetch ('http://localhost:5000/logs')
+    const data = await res.json()
+    return data
+  }
 
   //Add Log
   const addLog = (log) => {
@@ -34,8 +33,10 @@ function App() {
   return (
     <div className="container">
       <Header 
+      //Set the default state to not showing <AddLog> component?
       onAdd={()=> setShowAddLog(!showAddLog)}
-      showAdd={showAddLog} />
+      //The showButton prop allows for the button to toggle the <AddLog> component since we set to not to show
+      showButtonChange={showAddLog} />
       {showAddLog && <AddLog onAdd={addLog}/>}
       <Logs logs={logs} />
     </div>
