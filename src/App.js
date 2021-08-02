@@ -19,15 +19,30 @@ function App() {
   const fetchLogs = async () => {
     const res = await fetch ('http://localhost:5000/logs')
     const data = await res.json()
+    console.log(data)
     return data
   }
 
   //Add Log
-  const addLog = (log) => {
-    const id = Math.floor(Math.random()*1000) +1
-    const newLog = {id, ...log}
-    console.log(newLog)
-    setLogs([...logs, newLog])
+  // const addLog = (log) => {
+  //   const id = Math.floor(Math.random()*1000) +1
+  //   const newLog = {id, ...log}
+  //   console.log(newLog)
+  //   setLogs([...logs, newLog])
+  // }
+
+  const addLog = async (log) => {
+    const res = await fetch ('http://localhost:5000/logs', {
+      method: 'POST', 
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(log)
+    })
+
+    const data = await res.json()
+
+    setLogs([...logs, data])
   }
 
   return (
