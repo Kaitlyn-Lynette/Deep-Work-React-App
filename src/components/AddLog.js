@@ -1,10 +1,11 @@
 import {useState} from 'react'
+import {useLocation} from 'react-router-dom'
 
 
 const AddLog = ({onAdd}) => {
     const [text, setText] = useState('')
     const [day, setDay] = useState('')
-
+    const location = useLocation ()
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -20,6 +21,8 @@ const AddLog = ({onAdd}) => {
     }
 
     return (
+        <>
+        {location.pathname==='/' && (
         <form className='add-form' onSubmit={onSubmit}>
             <div className='form-control'>
                 <label>Log</label>
@@ -41,9 +44,8 @@ const AddLog = ({onAdd}) => {
                 type='submit' 
                 className='btn btn-block'
                 value='Save log'/>
-        </form>
-
-       
+        </form> )}
+        </>
     )
 }
 
