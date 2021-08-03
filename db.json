@@ -34,6 +34,26 @@
       "text": "Added a React Router Dom and learned to use UseLocation",
       "day": "08/02/2, 12:38PM",
       "id": 13
+    },
+    {
+      "text": "Added a button to the footer using the useLocation hook",
+      "day": "August 03 6:54am",
+      "id": 14
+    },
+    {
+      "text": "Testing day",
+      "day": "08/03, 7:15am",
+      "id": 15
+    },
+    {
+      "text": "Format date",
+      "day": "August 03 7:20am",
+      "id": 16
+    },
+    {
+      "text": "Trying to format the date",
+      "day": "8/3/2021",
+      "id": 17
     }
   ]
 }

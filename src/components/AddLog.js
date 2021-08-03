@@ -3,8 +3,9 @@ import {useLocation} from 'react-router-dom'
 
 
 const AddLog = ({onAdd}) => {
+    const dt = null
     const [text, setText] = useState('')
-    const [day, setDay] = useState('')
+    const [day, setDay] = useState(dt)
     const location = useLocation ()
 
     const onSubmit = (e) => {
@@ -17,8 +18,13 @@ const AddLog = ({onAdd}) => {
         onAdd({text, day})
 
         setText('')
-        setDay('')
+       
     }
+    const handleDate = () => {
+        let dt = new Date().toLocaleDateString()
+        setDay(dt) 
+    }
+
 
     return (
         <>
@@ -38,7 +44,9 @@ const AddLog = ({onAdd}) => {
                 type='text' 
                 placeholder='Add Time & Day'
                 value={day}
-                onChange={(e)=>setDay(e.target.value)} />
+                onClick={handleDate}
+                 />
+                 {/* onChange={(e)=>setDay(e.target.value)} */}
             </div> 
             <input  
                 type='submit' 
