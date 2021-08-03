@@ -6,6 +6,7 @@ const Footer = () => {
     return (
         <footer>
             {location.pathname==='/'&& (<Link to='/pastlogs'><Button text={'Past Logs'}/></Link>)}
+            {location.pathname==='/pastlogs'&& (<Link to='/'><Button text={'Go Back'}/></Link>)}
             <p>Copyright &copy; 2021</p>
             
         </footer>

@@ -15,3 +15,4 @@ PastLogs.defaultProps = {
 }
 
 export default PastLogs
+``
