@@ -22,12 +22,21 @@ function App() {
   const fetchLogs = async () => {
     const res = await fetch ('http://localhost:5000/logs')
     const data = await res.json()
-    console.log(data)
+    console.log(data[11].day)
+    var str = data[11].day
+    var kept = str.substring(0,str.indexOf(","))
+    console.log(kept)
+    const today = new Date().toLocaleDateString('en-US')
+    console.log(today)
+    if(kept===today) {
+      console.log(true)
+    } else{
+      console.log(false)
+    }
     return data
   }
 
   
-
   //Add Log
   // const addLog = (log) => {
   //   const id = Math.floor(Math.random()*1000) +1

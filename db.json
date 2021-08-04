@@ -54,6 +54,11 @@
       "text": "Trying to format the date",
       "day": "8/3/2021",
       "id": 17
+    },
+    {
+      "text": "Added timestamp",
+      "day": "8/4/2021, 8:35:50 AM",
+      "id": 18
     }
   ]
 }
