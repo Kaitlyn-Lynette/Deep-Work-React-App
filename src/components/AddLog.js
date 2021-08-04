@@ -21,7 +21,7 @@ const AddLog = ({onAdd}) => {
        
     }
     const handleDate = () => {
-        let dt = new Date().toLocaleDateString()
+        let dt= new Date().toLocaleString('en-US')
         setDay(dt) 
     }
 
