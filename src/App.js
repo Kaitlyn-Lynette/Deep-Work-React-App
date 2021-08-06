@@ -19,21 +19,43 @@ function App() {
   },[])
 
   //Fetch logs 
+  // const fetchLogs = async () => {
+  //   const res = await fetch ('http://localhost:5000/logs')
+  //   const data = await res.json()
+  //   // console.log(data[11].day)
+  //   for(var i = 0; i<data.length; i++) {
+  //     // console.lsog(data[i])
+  //     var date = data[i].day
+  //     console.log(date)
+  //   }
+  //   // var str = data[11].day
+  //   var dateStr = date.substring(0,date.indexOf(","))
+  //   console.log(dateStr)
+  //   const today = new Date().toLocaleDateString('en-US')
+  //   console.log(today)
+   
+  //   return data
+  // }
+
   const fetchLogs = async () => {
     const res = await fetch ('http://localhost:5000/logs')
     const data = await res.json()
-    console.log(data[11].day)
-    var str = data[11].day
-    var kept = str.substring(0,str.indexOf(","))
-    console.log(kept)
-    const today = new Date().toLocaleDateString('en-US')
-    console.log(today)
-    if(kept===today) {
-      console.log(true)
-    } else{
-      console.log(false)
+
+    const datesArr = [];
+      for(var i = 0; i<data.length; i++) {
+      console.log(data[i])
+      var date = data[i].day
+      console.log(date)
+      datesArr.push(date)
+      console.log(datesArr)
     }
-    return data
+
+    var todaysDate =  new Date().toLocaleDateString('en-US')
+
+    const todaysLogs = datesArr.filter(dateArr=> (dateArr.substring(0,dateArr.indexOf(","))===todaysDate))
+    console.log(todaysLogs)
+
+    return todaysLogs
   }
 
   
