@@ -1,44 +1,43 @@
 {
   "logs": [
     {
-     
-      "text": "Spent the day reviewing Express, SQL, and Sequelize", 
-      "day": "06/28/2021, 8:30:34: AM",
+      "text": "Spent the day reviewing Express, SQL, and Sequelize",
+      "day": "6/28/2021, 8:30:34: AM",
       "id": 7
     },
     {
       "text": "Practiced some algos.",
-      "day": "07/26/2021, 9:45:34 AM",
+      "day": "7/26/2021, 9:45:34 AM",
       "id": 8
     },
     {
       "text": "Worked on algos.",
-      "day": "07/17/2021, 10:35:20 AM",
+      "day": "7/17/2021, 10:35:20 AM",
       "id": 9
     },
     {
       "text": "Reviewed hash tables",
-      "day": "07/21/2021, 12:00:34 PM",
+      "day": "7/21/2021, 12:00:34 PM",
       "id": 10
     },
     {
       "text": "Viewed React JS Crash Course and practiced algos",
-      "day": "07/22/2021, 1:46:40 PM",
+      "day": "7/22/2021, 1:46:40 PM",
       "id": 11
     },
     {
       "text": "Solved algo on Codewars",
-      "day": "07/31/2021, 9:43:27 AM",
+      "day": "7/31/2021, 9:43:27 AM",
       "id": 12
     },
     {
       "text": "Added a React Router Dom and learned to use UseLocation",
-      "day": "08/02/2021, 12:38:55 PM",
+      "day": "8/2/2021, 12:38:55 PM",
       "id": 13
     },
     {
       "text": "Added a button to the footer using the useLocation hook",
-      "day": "08/02/2021, 4:54:30 AM",
+      "day": "8/2/2021, 4:54:30 AM",
       "id": 14
     },
     {
@@ -65,6 +64,11 @@
       "text": "Test ",
       "day": "8/6/2021, 8:35:41 AM",
       "id": 19
+    },
+    {
+      "text": "I want to filter the logs to show only todays logs",
+      "day": "8/6/2021",
+      "id": 20
     }
   ]
 }

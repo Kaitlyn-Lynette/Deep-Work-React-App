@@ -41,22 +41,12 @@ function App() {
     const res = await fetch ('http://localhost:5000/logs')
     const data = await res.json()
 
-    const datesArr = [];
-      for(var i = 0; i<data.length; i++) {
-      console.log(data[i])
-      var date = data[i].day
-      console.log(date)
-      datesArr.push(date)
-      console.log(datesArr)
+    // const today = new Date().toLocaleDateString('en-US')
+    
+    // data.filter(dataVal =>dataVal.day === today).map(todaysLog => (
+    //   console.log(todaysLog)
+    return data
     }
-
-    var todaysDate =  new Date().toLocaleDateString('en-US')
-
-    const todaysLogs = datesArr.filter(dateArr=> (dateArr.substring(0,dateArr.indexOf(","))===todaysDate))
-    console.log(todaysLogs)
-
-    return todaysLogs
-  }
 
   
   //Add Log
@@ -100,6 +90,6 @@ function App() {
     </div>
     </Router>
   );
-}
+      }
 
 export default App;
