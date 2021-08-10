@@ -69,6 +69,26 @@
       "text": "I want to filter the logs to show only todays logs",
       "day": "8/6/2021",
       "id": 20
+    },
+    {
+      "text": "Show logs from today",
+      "day": "8/10/2021",
+      "id": 21
+    },
+    {
+      "text": "Show logs from today",
+      "day": "8/10/2021",
+      "id": 22
+    },
+    {
+      "text": "Only the date",
+      "day": "8/10/2021",
+      "id": 23
+    },
+    {
+      "text": "Date should disappear",
+      "day": "8/10/2021",
+      "id": 24
     }
   ]
 }
