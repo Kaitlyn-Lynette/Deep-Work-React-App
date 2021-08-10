@@ -19,36 +19,12 @@ function App() {
     getLogs()
   },[])
 
-  //Fetch logs 
-  // const fetchLogs = async () => {
-  //   const res = await fetch ('http://localhost:5000/logs')
-  //   const data = await res.json()
-  //   // console.log(data[11].day)
-  //   for(var i = 0; i<data.length; i++) {
-  //     // console.lsog(data[i])
-  //     var date = data[i].day
-  //     console.log(date)
-  //   }
-  //   // var str = data[11].day
-  //   var dateStr = date.substring(0,date.indexOf(","))
-  //   console.log(dateStr)
-  //   const today = new Date().toLocaleDateString('en-US')
-  //   console.log(today)
-   
-  //   return data
-  // }
 
   const fetchLogs = async () => {
     const res = await fetch ('http://localhost:5000/logs')
     const data = await res.json()
-
-    // const today = new Date().toLocaleDateString('en-US')
-    
-    // data.filter(dataVal =>dataVal.day === today).map(todaysLog => (
-    //   console.log(todaysLog)
-    return data
-    }
-
+      return data
+  }
   
   //Add Log
   // const addLog = (log) => {

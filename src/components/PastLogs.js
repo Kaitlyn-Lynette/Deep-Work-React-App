@@ -8,9 +8,7 @@ const PastLogs = ({logs}) => {
                 <Log key={pastlogs.id} log={pastlogs}/> 
             ))}
         </div>
-       
     )
-        
 }
 
 PastLogs.defaultProps = {
