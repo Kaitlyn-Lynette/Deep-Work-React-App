@@ -18,11 +18,13 @@ const AddLog = ({onAdd}) => {
         onAdd({text, day})
 
         setText('')
+        setDay('')
        
     }
     const handleDate = () => {
-        let dt= new Date().toLocaleString('en-US')
+        let dt= new Date().toLocaleDateString("en-US")
         setDay(dt) 
+       
     }
 
 
@@ -42,7 +44,7 @@ const AddLog = ({onAdd}) => {
                 <label>Day & Time</label>
                 <input 
                 type='text' 
-                placeholder='Add Time & Day'
+                placeholder='Add Day'
                 value={day}
                 onClick={handleDate}
                  />

@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import AddLog from './components/AddLog'
 import Logs from './components/Logs'
+import PastLogs from './components/PastLogs'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 
@@ -18,16 +19,13 @@ function App() {
     getLogs()
   },[])
 
-  //Fetch logs 
+
   const fetchLogs = async () => {
     const res = await fetch ('http://localhost:5000/logs')
     const data = await res.json()
-    console.log(data)
-    return data
+      return data
   }
-
   
-
   //Add Log
   // const addLog = (log) => {
   //   const id = Math.floor(Math.random()*1000) +1
@@ -59,16 +57,22 @@ function App() {
       //The showButton prop allows for the button to toggle the <AddLog> component since we set to not to show
       showButtonChange={showAddLog} />
       {showAddLog && <AddLog onAdd={addLog}/>}
-      <Route path='/pastlogs' 
+      <Route path='/' 
       exact render={(props)=> (
         <>
       <Logs logs={logs} />
+        </>
+      )} />
+      <Route path='/pastlogs' 
+      exact render={(props)=> (
+        <>
+      <PastLogs logs={logs} />
         </>
       )} />
       <Footer />
     </div>
     </Router>
   );
-}
+      }
 
 export default App;

@@ -33,6 +33,12 @@
   justify-content: space-between;
 }
 
+.pastlogs {
+  background: #f4f4f4;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
 
 .form-control {
   margin: 20px 0;

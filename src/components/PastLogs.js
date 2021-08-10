@@ -1,10 +1,12 @@
-import {Link} from 'react-router-dom'
-import Button from './Button'
+import Log from './Log'
 
-const PastLogs = () => {
+const PastLogs = ({logs}) => {
+    const today = new Date().toLocaleDateString('en-US')
     return (
-        <div>
-            <Link to='/'><Button text={'Go Back'}/></Link>
+        <div classname="pastlogs">
+            {logs.filter(log=> log.day!==today).map((pastlogs) =>(
+                <Log key={pastlogs.id} log={pastlogs}/> 
+            ))}
         </div>
     )
 }
@@ -15,4 +17,3 @@ PastLogs.defaultProps = {
 }
 
 export default PastLogs
-``
